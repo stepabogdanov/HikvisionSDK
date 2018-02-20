@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Manage - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\likui\LOCALS~1\Temp\RSP1C4.tmp" with contents
+[
+HCNetSDK.lib PlayCtrl.lib ws2_32.lib DsSdk.lib /nologo /subsystem:windows /incremental:no /pdb:"../../../lib/Manage.pdb" /machine:I386 /out:"../../../lib/Manage.exe" /libpath:"../../../lib" 
+".\Release\DlgCheckTime.obj"
+".\Release\DlgDeviceState.obj"
+".\Release\DlgFormatHD.obj"
+".\Release\DlgLogSearch.obj"
+".\Release\DlgUpdate.obj"
+".\Release\Manage.obj"
+".\Release\ManageDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\Manage.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\likui\LOCALS~1\Temp\RSP1C4.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+Manage.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

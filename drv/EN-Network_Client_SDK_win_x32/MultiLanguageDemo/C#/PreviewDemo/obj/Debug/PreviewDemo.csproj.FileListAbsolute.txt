@@ -1,0 +1,19 @@
+D:\2012CMMI\PJ01D2012070501网络SDK V4.2项目\trunk\工程\12软件开发\执行程序\build4\lib\PreviewDemo.exe
+D:\2012CMMI\PJ01D2012070501网络SDK V4.2项目\trunk\工程\12软件开发\执行程序\build4\lib\PreviewDemo.pdb
+D:\2012CMMI\PJ01D2012070501网络SDK V4.2项目\trunk\工程\12软件开发\执行程序\build4\HCNetSDK V4.2.0.4_build20121024_win32\HCNetSDK V4.2.0.4_build20121024_win32_CN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\ResolveAssemblyReference.cache
+D:\2012CMMI\PJ01D2012070501网络SDK V4.2项目\trunk\工程\12软件开发\执行程序\build4\HCNetSDK V4.2.0.4_build20121024_win32\HCNetSDK V4.2.0.4_build20121024_win32_CN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\PreviewDemo.exe
+D:\2012CMMI\PJ01D2012070501网络SDK V4.2项目\trunk\工程\12软件开发\执行程序\build4\HCNetSDK V4.2.0.4_build20121024_win32\HCNetSDK V4.2.0.4_build20121024_win32_CN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\PreviewDemo.pdb
+D:\2012CMMI\PJ01D2012070501网络SDK V4.2项目\trunk\工程\12软件开发\执行程序\build4\HCNetSDK V4.2.0.4_build20121024_win32\HCNetSDK V4.2.0.4_build20121024_win32_CN\lib\PreviewDemo.exe
+D:\2012CMMI\PJ01D2012070501网络SDK V4.2项目\trunk\工程\12软件开发\执行程序\build4\HCNetSDK V4.2.0.4_build20121024_win32\HCNetSDK V4.2.0.4_build20121024_win32_CN\lib\PreviewDemo.pdb
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\PreviewDemo.exe
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\PreviewDemo.pdb
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\lib\PreviewDemo.exe
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\lib\PreviewDemo.pdb
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\PreviewDemo.AlarmConfig.resources
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\PreviewDemo.PTZCtrl.resources
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\PreviewDemo.VoiceTalk.resources
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\PreviewDemo.MotionDetect.resources
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\PreviewDemo.Preview.resources
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\PreviewDemo.Properties.Resources.resources
+C:\Documents and Settings\wangxiaomin\桌面\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\HCNetSDK V4.2.1.8_build20130108_win32_EN\MultiLanguageDemo\C#\PreviewDemo\obj\Debug\PreviewDemo.csproj.GenerateResource.Cache

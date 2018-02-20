@@ -1,0 +1,48 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Alarm - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/Alarm.res" /d "NDEBUG" /d "_AFXDLL" "D:\2012CMMI\PJ01D2012070501网络SDK V4.2项目\trunk\工程\12软件开发\执行程序\发布程序\HCNetSDK V4.2.0.4_build20121024_win32_EN\MultiLanguageDemo\MFC\Alarm\Alarm.rc"" 
+Creating temporary file "C:\DOCUME~1\likui\LOCALS~1\Temp\RSPF.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "../../../inCn" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Alarm.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\2012CMMI\PJ01D2012070501网络SDK V4.2项目\trunk\工程\12软件开发\执行程序\发布程序\HCNetSDK V4.2.0.4_build20121024_win32_EN\MultiLanguageDemo\MFC\Alarm\Alarm.cpp"
+"D:\2012CMMI\PJ01D2012070501网络SDK V4.2项目\trunk\工程\12软件开发\执行程序\发布程序\HCNetSDK V4.2.0.4_build20121024_win32_EN\MultiLanguageDemo\MFC\Alarm\AlarmDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\likui\LOCALS~1\Temp\RSPF.tmp" 
+Creating temporary file "C:\DOCUME~1\likui\LOCALS~1\Temp\RSP10.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "../../../inCn" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Alarm.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\2012CMMI\PJ01D2012070501网络SDK V4.2项目\trunk\工程\12软件开发\执行程序\发布程序\HCNetSDK V4.2.0.4_build20121024_win32_EN\MultiLanguageDemo\MFC\Alarm\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\likui\LOCALS~1\Temp\RSP10.tmp" 
+Creating temporary file "C:\DOCUME~1\likui\LOCALS~1\Temp\RSP11.tmp" with contents
+[
+HCNetSDK.lib PlayCtrl.lib ws2_32.lib DsSdk.lib winmm.lib /nologo /subsystem:windows /incremental:no /pdb:"../../../lib/Alarm.pdb" /machine:I386 /out:"../../../lib/Alarm.exe" /libpath:"../../../lib" 
+".\Release\Alarm.obj"
+".\Release\AlarmDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\Alarm.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\likui\LOCALS~1\Temp\RSP11.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Alarm.cpp
+AlarmDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Alarm.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,38 @@
+Version: V4.2.1.8 build 20130108
+
+Update: Add the support of DS-6700 encoder.
+
+
+ The device network SDK is developed based on private network communication protocol, and it is designed for the remote connection and configuration of embedded DVR, DVS, IPC and the other IP devices.
+
+The functions supported by the SDK 
+1. Live view, playback, remote file download, PTZ control, arm/disarm, voice talk, log query, decoding card function, etc. 
+2. Remote upgrade, remotely reboot, remotely shut down, remotely format hard disk, and device configuration (system configuration, channel configuration, serial port configuration, alarm configuration, users configuration), etc. 
+
+ 
+
+Supported device list:
+
+1. Encoders or decoders
+
+NVR: DS-9600, DS-9500, DS-7700, DS-7600 series;
+ HDVR: DS-9000, DS-8000-ST, DS-7600 series;
+ DVR: DS-9100, DS-8100, DS-8000-S, DS-8800, DS-7800, DS-7300, DS-7200, DS-7100, DS-7000 series;
+ DVS: DS-6600, DS-6500(-JX), DS-6100, DS-6401HFH, DS-6000 series;
+ Decoder: DS-6300D(-JX), DS-6400HD(-JX/-T), DS-6500D series
+ Remarks: including the model of -ST, -SH, -SE, -SN, -RT, -RH, -XT
+
+2. IP cameras or IP speed domes
+
+IPC: standard definition, high definition, the infrared, the thermal, e.g. DS-2CD7xx, DS-2CD71xx, DS-2CD72xx, DS-2CD8xx, DS-2CD81xx, DS-2CD82xx, DS-2CD84xx, DS-2CD83xx, and so on
+ IPD: standard definition, high definition, the infrared, e.g. DS-2DF1-7xx, DS-2DF1-6xx, DS-2DF1-5xx, DS-2DF1-4xx, DS-2DM1-7xx, DS-2DM1-6xx, DS-2DM1-5xx, and so on
+ Zoom camera: DS-2DZ216MF and so on
+ Intelligent traffic camera: DS-2CD986, DS-2CD977, DS-2CD976, DS-2CD966 and so on
+
+3. Intelligent devices
+
+Behavior analysis, ATM protection, automatic tracking, passenger flow counting, face recognition, intelligent traffic event, and so on
+
+4. Other IP devices
+
+CVR, Alarm host, Multi-screen controller , IP module, and so on

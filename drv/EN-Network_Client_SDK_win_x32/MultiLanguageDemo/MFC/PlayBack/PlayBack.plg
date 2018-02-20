@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PlayBack - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\likui\LOCALS~1\Temp\RSP1A0.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../../inCn" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/PlayBack.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\likui\×ÀÃæ\HCNetSDK V4.2.0.4_build20121024_win32\HCNetSDK V4.2.0.4_build20121024_win32_EN\MultiLanguageDemo\MFC\PlayBack\PlayBackDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\likui\LOCALS~1\Temp\RSP1A0.tmp" 
+Creating temporary file "C:\DOCUME~1\likui\LOCALS~1\Temp\RSP1A1.tmp" with contents
+[
+HCNetSDK.lib PlayCtrl.lib ws2_32.lib DsSdk.lib winmm.lib /nologo /subsystem:windows /incremental:yes /pdb:"../../../lib/PlayBack.pdb" /debug /machine:I386 /out:"../../../lib/PlayBack.exe" /pdbtype:sept /libpath:"../../../lib" 
+".\Debug\AddDevice.obj"
+".\Debug\PlayBack.obj"
+".\Debug\PlayBackDlg.obj"
+".\Debug\PlayRemoteFile.obj"
+".\Debug\PlayTimeFile.obj"
+".\Debug\StdAfx.obj"
+".\Debug\PlayBack.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\likui\LOCALS~1\Temp\RSP1A1.tmp"
+<h3>Output Window</h3>
+Compiling...
+PlayBackDlg.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+PlayBack.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

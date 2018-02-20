@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: RealPlay - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\likui\LOCALS~1\Temp\RSP1A8.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../../inCn" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/RealPlay.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\likui\桌面\HCNetSDK V4.2.0.4_build20121024_win32\HCNetSDK V4.2.0.4_build20121024_win32_EN\MultiLanguageDemo\MFC\RealPlay&PTZ\DlgPTZCruise.cpp"
+"C:\Documents and Settings\likui\桌面\HCNetSDK V4.2.0.4_build20121024_win32\HCNetSDK V4.2.0.4_build20121024_win32_EN\MultiLanguageDemo\MFC\RealPlay&PTZ\PTZButton.cpp"
+"C:\Documents and Settings\likui\桌面\HCNetSDK V4.2.0.4_build20121024_win32\HCNetSDK V4.2.0.4_build20121024_win32_EN\MultiLanguageDemo\MFC\RealPlay&PTZ\RealPlay.cpp"
+"C:\Documents and Settings\likui\桌面\HCNetSDK V4.2.0.4_build20121024_win32\HCNetSDK V4.2.0.4_build20121024_win32_EN\MultiLanguageDemo\MFC\RealPlay&PTZ\RealPlayDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\likui\LOCALS~1\Temp\RSP1A8.tmp" 
+Creating temporary file "C:\DOCUME~1\likui\LOCALS~1\Temp\RSP1A9.tmp" with contents
+[
+HCNetSDK.lib PlayCtrl.lib ws2_32.lib DsSdk.lib /nologo /subsystem:windows /incremental:yes /pdb:"../../../lib/RealPlay.pdb" /debug /machine:I386 /out:"../../../lib/RealPlay.exe" /pdbtype:sept /libpath:"../../../lib" 
+".\Debug\DlgPTZCruise.obj"
+".\Debug\PTZButton.obj"
+".\Debug\RealPlay.obj"
+".\Debug\RealPlayDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\RealPlay.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\likui\LOCALS~1\Temp\RSP1A9.tmp"
+<h3>Output Window</h3>
+Compiling...
+DlgPTZCruise.cpp
+PTZButton.cpp
+RealPlay.cpp
+RealPlayDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+RealPlay.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
