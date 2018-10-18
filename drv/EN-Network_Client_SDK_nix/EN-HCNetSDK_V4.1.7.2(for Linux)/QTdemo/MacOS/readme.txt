@@ -1,0 +1,1 @@
+After generating the file "QtClientDemo.app", please copy files "*.dylib" in the directory "lib" to the directory "lib/QtClientDemo.app/Contents/MacOS/".

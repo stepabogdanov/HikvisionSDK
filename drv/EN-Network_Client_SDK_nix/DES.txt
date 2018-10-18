@@ -1,0 +1,17 @@
+Software Name	DVR/DVS/IP Camera Linux Client SDK V4.1.7.2
+Software Size	
+Software Description	
+Network Client SDK for HIKVISION standalone DVR, Hybrid DVR, NVR, DVS, Network camera and Network speed dome.
+
+ 
+
+SDK Version: V4.1.7.2
+ OS: Linux (32bit), gcc 3.4 or higher version
+ Tested OS: RedHat AS4/5/6, (Fedora)FC8/10/12, CentOS 4/5, SUSE 10, openSUSE 11, and Ubuntu 9.04/10.04
+
+
+ Update:
+ 1. Support DS-96xxNI-ST, DS-96xxNI-RH, DS-90xxHFI-ST, DS-80xxHFI-ST and DS-76xxNI-ST
+ 2. Add new log types, and functions for IP channel acess configuration, RAID scan, etc.
+
+Please refer to the Programming Manual in the download content for updating details.
