@@ -1,4 +1,4 @@
-package Main;
+package Test;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;
@@ -18,4 +18,6 @@ public class Tester {
     public interface User32 extends Library {
         Pointer GetDesktopWindow();
     }
+
+
 }

@@ -1,5 +1,6 @@
-package Main;
+package Main.ILibrary;
 
+import Main.Main;
 import com.sun.jna.NativeLong;
 import com.sun.jna.Structure;
 
@@ -8,29 +9,78 @@ import java.util.List;
 
 public class StructureImpl  {
 
-    public static LPNET_DVR_SDKSTATE getLPNET_DVR_SDKSTATE() {
-        return new LPNET_DVR_SDKSTATE();
+    private LPNET_DVR_SDKSTATE sdkstate;
+    private LPNET_DVR_SDKABL lpnetDvrSdkabl;
+    private LPNET_DVR_DEVICEINFO_V30 lpnetDvrDeviceinfoV30;
+    private LPNET_DVR_DISKABILITY_LIST lpnetDvrDiskabilityList;
+    private LPNET_DVR_FINDDATA_V30 lpnetDvrFinddataV30;
+    private NET_DVR_DESC_NODE netDvrDescNode;
+    private NET_DVR_FILECOND netDvrFilecond;
+    private NET_DVR_TIME netDvrTime;
+
+
+    public LPNET_DVR_SDKSTATE getSdkstate() {
+        return sdkstate;
     }
-    public static LPNET_DVR_SDKABL getLPNET_DVR_SDKABL() {
-        return new LPNET_DVR_SDKABL();
+
+    public LPNET_DVR_SDKABL getLpnetDvrSdkabl() {
+        return lpnetDvrSdkabl;
     }
-    public static LPNET_DVR_DEVICEINFO_V30 getLPNET_DVR_DEVICEINFO_V30() {
-        return  new LPNET_DVR_DEVICEINFO_V30();
+
+    public LPNET_DVR_DEVICEINFO_V30 getLpnetDvrDeviceinfoV30() {
+        return lpnetDvrDeviceinfoV30;
     }
-    public static LPNET_DVR_DISKABILITY_LIST getLPNET_DVR_DISKABILITY_LIST() {
-        return new LPNET_DVR_DISKABILITY_LIST();
+
+    public LPNET_DVR_DISKABILITY_LIST getLpnetDvrDiskabilityList() {
+        return lpnetDvrDiskabilityList;
     }
-    public static NET_DVR_DESC_NODE getNET_DVR_DESC_NODE() {
-        return new NET_DVR_DESC_NODE();
+
+    public LPNET_DVR_FINDDATA_V30 getLpnetDvrFinddataV30() {
+        return lpnetDvrFinddataV30;
     }
-    public static NET_DVR_FILECOND getNET_DVR_FILECOND() {
-        return new NET_DVR_FILECOND();
+
+    public NET_DVR_DESC_NODE getNetDvrDescNode() {
+        return netDvrDescNode;
     }
-    public static NET_DVR_TIME getNET_DVR_TIME() {
-        return new NET_DVR_TIME();
+
+    public NET_DVR_FILECOND getNetDvrFilecond() {
+        return netDvrFilecond;
     }
-    public static LPNET_DVR_FINDDATA_V30  getLPNET_DVR_FINDDATA_V30 () {
-        return new LPNET_DVR_FINDDATA_V30();
+
+    public NET_DVR_TIME getNetDvrTime() {
+        return netDvrTime;
+    }
+
+    public void setSdkstate(LPNET_DVR_SDKSTATE sdkstate) {
+        this.sdkstate = sdkstate;
+    }
+
+    public void setLpnetDvrSdkabl(LPNET_DVR_SDKABL lpnetDvrSdkabl) {
+        this.lpnetDvrSdkabl = lpnetDvrSdkabl;
+    }
+
+    public void setLpnetDvrDeviceinfoV30(LPNET_DVR_DEVICEINFO_V30 lpnetDvrDeviceinfoV30) {
+        this.lpnetDvrDeviceinfoV30 = lpnetDvrDeviceinfoV30;
+    }
+
+    public void setLpnetDvrDiskabilityList(LPNET_DVR_DISKABILITY_LIST lpnetDvrDiskabilityList) {
+        this.lpnetDvrDiskabilityList = lpnetDvrDiskabilityList;
+    }
+
+    public void setLpnetDvrFinddataV30(LPNET_DVR_FINDDATA_V30 lpnetDvrFinddataV30) {
+        this.lpnetDvrFinddataV30 = lpnetDvrFinddataV30;
+    }
+
+    public void setNetDvrDescNode(NET_DVR_DESC_NODE netDvrDescNode) {
+        this.netDvrDescNode = netDvrDescNode;
+    }
+
+    public void setNetDvrFilecond(NET_DVR_FILECOND netDvrFilecond) {
+        this.netDvrFilecond = netDvrFilecond;
+    }
+
+    public void setNetDvrTime(NET_DVR_TIME netDvrTime) {
+        this.netDvrTime = netDvrTime;
     }
 
     public static class  LPNET_DVR_SDKSTATE extends Structure {
