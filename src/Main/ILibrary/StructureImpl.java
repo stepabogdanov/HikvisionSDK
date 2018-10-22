@@ -3,6 +3,7 @@ package Main.ILibrary;
 import Main.Main;
 import com.sun.jna.NativeLong;
 import com.sun.jna.Structure;
+import com.sun.jna.platform.win32.WinDef;
 
 import java.util.Arrays;
 import java.util.List;
@@ -17,6 +18,7 @@ public class StructureImpl  {
     private NET_DVR_DESC_NODE netDvrDescNode;
     private NET_DVR_FILECOND netDvrFilecond;
     private NET_DVR_TIME netDvrTime;
+    private LPNET_DVR_CLIENTINFO lpnetDvrClientinfo;
 
 
     public LPNET_DVR_SDKSTATE getSdkstate() {
@@ -268,6 +270,24 @@ public class StructureImpl  {
             );
         }
     }
+    public static class LPNET_DVR_CLIENTINFO extends Structure {
+        public NativeLong    lChannel;
+        public NativeLong   lLinkMode;
+        public WinDef.HWND hPlayWnd;
+        public String sMultiCastIP;
+
+        @Override
+        protected List<String> getFieldOrder() {
+            return Arrays.asList(
+                "lChannel",
+                "lLinkMode",
+                "hPlayWnd",
+                "sMultiCastIP"
+            );
+
+        }
+    }
+
     public static class LPNET_DVR_FINDDATA_V30 extends Structure {
         public char[] sFileName = new char[100];
         public NET_DVR_TIME struStartTime;

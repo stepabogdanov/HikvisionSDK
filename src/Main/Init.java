@@ -3,7 +3,9 @@ package Main;
 import Main.ILibrary.HCNetSDK;
 import Main.ILibrary.StructureImpl;
 import com.sun.jna.*;
+import com.sun.jna.platform.win32.WinDef;
 
+import javax.swing.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,31 +17,42 @@ public class Init {
     public static Logger logger = Logger.getLogger("MyLogger");
 
     StructureImpl bigStrucrure = new StructureImpl();
+    static NativeLong userId;
+    static StructureImpl.LPNET_DVR_DEVICEINFO_V30 dvrDeviceInfoV30 = new StructureImpl.LPNET_DVR_DEVICEINFO_V30();
+
 
     private static HCNetSDK hcNetSDK = (HCNetSDK) Native.load("/home/home/Java/HikvisionSDK/libhcnetsdk.so" , HCNetSDK.class);
 
-    void init() {
-        boolean init = hcNetSDK.NET_DVR_Init();
-        logger.info("initStatus: " + init );
+    static void init() {
+        logger.setLevel(Level.OFF);
+        boolean init = false;
+        init = hcNetSDK.NET_DVR_Init();
+        init = hcNetSDK.NET_DVR_SetConnectTime(new NativeLong(2000), new NativeLong(1));
+        init = hcNetSDK.NET_DVR_SetReconnect(new NativeLong(2000), true);
+
+        System.out.println("initStatus: " + init);
 
     }
 
-    void cleanup() {
+    static void cleanup() {
         boolean cleanup = hcNetSDK.NET_DVR_Cleanup();
-        logger.info("cleanupStatus: " + cleanup);
+        System.out.println("cleanupStatus: " + cleanup);
     }
 
     static StructureImpl.LPNET_DVR_SDKSTATE getSDKState() throws InterruptedException {
         StructureImpl.LPNET_DVR_SDKSTATE sdkstate = new StructureImpl.LPNET_DVR_SDKSTATE();
         boolean sdkStateGetSuccess = hcNetSDK.NET_DVR_GetSDKState(sdkstate);
-        logger.info("sdkStateSuccess: " + sdkStateGetSuccess + '\n' + sdkstate);
+        System.out.println("sdkStateSuccess: " + sdkStateGetSuccess );
+        logger.info( "" + '\n' + sdkstate);
         return sdkstate;
     }
 
     static NativeLong login(String login, String password, String ipAddress, short port) {
-        StructureImpl.LPNET_DVR_DEVICEINFO_V30 dvrDeviceinfoV30 = new StructureImpl.LPNET_DVR_DEVICEINFO_V30();
-        NativeLong userId = hcNetSDK.NET_DVR_Login_V30(ipAddress, port, login, password, dvrDeviceinfoV30);
-        logger.info("LastErrorMessage: " + hcNetSDK.NET_DVR_GetLastError() + '\n' + dvrDeviceinfoV30);
+        userId = hcNetSDK.NET_DVR_Login_V30(ipAddress, port, login, password, dvrDeviceInfoV30);
+        System.out.println("LOGGING : " + hcNetSDK.NET_DVR_GetLastError());
+
+        System.out.println("UserID: " + userId);
+        logger.info('\n' + "" + dvrDeviceInfoV30);
         return userId;
 
     }
@@ -48,7 +61,10 @@ public class Init {
         StructureImpl.LPNET_DVR_SDKABL abilityList = new StructureImpl.LPNET_DVR_SDKABL();
         hcNetSDK.NET_DVR_GetSDKAbility(abilityList);
         logger.info("abilityList: " + abilityList);
+    }
 
+    static String getSerialNumbre() {
+        return new String(dvrDeviceInfoV30.sSerialNumber);
     }
 
     static void downloadFileByTime(NativeLong userId, NativeLong channel ) throws InterruptedException {
@@ -71,9 +87,25 @@ public class Init {
 
         getFileStatus = hcNetSDK.NET_DVR_GetFileByTime(userId, channel, timeBegin, timeEnd, "video.mp4");
         while (hcNetSDK.NET_DVR_GetDownloadPos(getFileStatus) == 100) {
-            logger.info("Download status: " + hcNetSDK.NET_DVR_GetDownloadPos(getFileStatus));
+            System.out.println("Download status: " + hcNetSDK.NET_DVR_GetDownloadPos(getFileStatus));
             Thread.sleep(1000);
         }
+
+
+    }
+
+    static void logOut() {
+        boolean logOut = hcNetSDK.NET_DVR_Logout(userId);
+        System.out.println("LOGGING_OUT: " + logOut);
+    }
+
+    static void realPlay(WinDef.HWND window) {
+        StructureImpl.LPNET_DVR_CLIENTINFO lpnet_dvr_clientinfo = new StructureImpl.LPNET_DVR_CLIENTINFO();
+        lpnet_dvr_clientinfo.lChannel = new NativeLong(1);
+        lpnet_dvr_clientinfo.lLinkMode = new NativeLong(0);
+        lpnet_dvr_clientinfo.hPlayWnd = window;
+        lpnet_dvr_clientinfo.sMultiCastIP = null;
+        hcNetSDK.NET_DVR_RealPlay_V30(userId, lpnet_dvr_clientinfo, null, null, false);
 
 
     }
@@ -86,7 +118,7 @@ public class Init {
        public static void initOld() {
 //        LPNET_DVR_SDKSTATE structure = new StructureImpl.LPNET_DVR_SDKSTATE();
 //        LPNET_DVR_SDKSTATE lpnetDvrSdkstate = new LPNET_DVR_SDKSTATE();
-        logger.setLevel(Level.ALL);
+        logger.setLevel(Level.OFF);
         int buildVersion;
         int version;
         int error;
@@ -107,24 +139,23 @@ public class Init {
 
         System.out.println("initOld: " + hcNetSDK.NET_DVR_Init() + '\n' +
                             "versoin:  " + (version = hcNetSDK.NET_DVR_GetSDKVersion()) + '\n' +
-                            "BuildVersion: " + (buildVersion = hcNetSDK.NET_DVR_GetSDKBuildVersion()) + '\n' +
-                            "SDK State: " + hcNetSDK.NET_DVR_GetSDKState(state));
-
+                            "BuildVersion: " + (buildVersion = hcNetSDK.NET_DVR_GetSDKBuildVersion()));
+        logger.info("SDK State: " + hcNetSDK.NET_DVR_GetSDKState(state));
 
 
         logger.info( "state: " + state);
-        logger.info(" version: " + Integer.toHexString(version));
-        logger.info("build version : " + Integer.toHexString(buildVersion));
+        System.out.println(" version: " + Integer.toHexString(version));
+        System.out.println("build version : " + Integer.toHexString(buildVersion));
 
         trueOrFalse = false;
         trueOrFalse = hcNetSDK.NET_DVR_GetSDKAbility(ability);
-        logger.info("Ability: " + trueOrFalse);
+        System.out.println("Ability: " + trueOrFalse);
         logger.info("AbilityMaxLogin: " + Integer.toHexString(ability.dwMaxLoginNum));
 
         NativeLong userId = new NativeLong();
-        userId = hcNetSDK.NET_DVR_Login_V30("192.168.1.23", (short)8000, "admin", "12345", deviceinfo_v30);
+        userId = hcNetSDK.NET_DVR_Login_V30("192.168.1.12", (short)8000, "admin", "12345", deviceinfo_v30);
         logger.info("deviceInfo: " + deviceinfo_v30.byDVRType);
-        logger.info("userId: " + userId);
+        System.out.println("userId: " + userId);
         char [] serial = new char[28];
         for (int i=0; i<28;i++) {
             serial[i] = (char) deviceinfo_v30.sSerialNumber[i];
@@ -137,15 +168,15 @@ public class Init {
         int buffersize = 0;
         error = 0;
         trueOrFalse = false;
-        trueOrFalse = hcNetSDK.NET_DVR_GetDVRConfig(userId, 118, new NativeLong(1), timeServer, buffersize,  size);
+//      trueOrFalse = hcNetSDK.NET_DVR_GetDVRConfig(userId, 118, new NativeLong(1), timeServer, buffersize,  size);
         error = hcNetSDK.NET_DVR_GetLastError();
-        System.out.println("GetCFG: " + " " + trueOrFalse + timeServer + "error: " + error );
+        logger.info("GetCFG: " + " " + trueOrFalse + timeServer + "error: " + error );
 
-        logger.info("deviceInfo: \n\n" + String.valueOf(serial));
-        logger.info("deviceInfo: " );
+        System.out.println("deviceInfo: \n\n" + String.valueOf(serial));
+        System.out.println("deviceInfo: " );
 
         trueOrFalse = false;
-        trueOrFalse = hcNetSDK.NET_DVR_GetDiskList(userId, abilityList);
+//        trueOrFalse = hcNetSDK.NET_DVR_GetDiskList(userId, abilityList);
         error = hcNetSDK.NET_DVR_GetLastError();
         logger.info("Error: " + error);
         logger.info("diskList: " + trueOrFalse);
@@ -179,15 +210,15 @@ public class Init {
 
         NativeLong channel = new NativeLong(1);
         //fileSearch = hcNetSDK.NET_DVR_FindFile_V30(userId, filecond);
-        fileSearchByTime = hcNetSDK.NET_DVR_GetFileByTime(userId, channel, timeBegin, timeEnd, "videoHik.mp4");
+//        fileSearchByTime = hcNetSDK.NET_DVR_GetFileByTime(userId, channel, timeBegin, timeEnd, "videoHik.mp4");
         System.out.println("fileSearchByTime: " + fileSearchByTime);
 
         trueOrFalse = false;
         int value = 0;
-        trueOrFalse = hcNetSDK.NET_DVR_PlayBackControl_V40(fileSearchByTime, 1, "", 0,"",0);
+//        trueOrFalse = hcNetSDK.NET_DVR_PlayBackControl_V40(fileSearchByTime, 1, "", 0,"",0);
         System.out.println("Playback:" + trueOrFalse);
         try {
-            Thread.sleep(5000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -220,7 +251,7 @@ public class Init {
 
 
         trueOrFalse = false;
-        trueOrFalse = hcNetSDK.NET_DVR_FindClose_V30(fileSearch);
+//        trueOrFalse = hcNetSDK.NET_DVR_FindClose_V30(fileSearch);
         error = 0;
         error = hcNetSDK.NET_DVR_GetLastError();
         logger.info("findFileClose: " + trueOrFalse + " " + error);
